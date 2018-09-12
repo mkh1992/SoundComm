@@ -85,7 +85,9 @@ if isempty(FwReg)
     BwReg=zeros(SamplePerSymbol,nfbkweights);
 end
 if isempty(CovMatrix)
+    if ~isempty(Constant2)
     CovMatrix=Constant2*eye(length(Weights));
+    end
 end
 if isempty(symbol)
    symbol=1;

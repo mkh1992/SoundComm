@@ -49,7 +49,10 @@ while curser+(SymbolsInFrame*SamplePerSymbol)<=length(Audio)
     WinData=Audio((curser+1-BaseGuard):(curser+(SymbolsInFrame*SamplePerSymbol)+BaseGuard));
     [FrameBase]=BasebandRecovery(WinData,CenterFreq,curser,BaseGuard);
     switch DemodMod
-        case 1 || 2
+        case 1
+            [DemodRes,MSE]=DfeEqualizer(FrameBase,...
+               SymbolRate,nfwdweights,nfbkweights,TrainMod,cons1,cons2);
+        case 2
             [DemodRes,MSE]=DfeEqualizer(FrameBase,...
                SymbolRate,nfwdweights,nfbkweights,TrainMod,cons1,cons2);
         case 3
