@@ -1,7 +1,7 @@
 function ESS_sig=CHIRP(CenterFrequency,SymbolRate)
 %% ESS signal and inverse
 BW=SymbolRate;
-duration = 2;
+duration = 0.2;
 f1=CenterFrequency-BW/2;
 f2=CenterFrequency+BW/2;
 n=(0:(1/44100):(duration-1/44100)).'; % designed for sampling rate 44100
