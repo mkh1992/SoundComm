@@ -154,8 +154,8 @@ location = uicontrol('Parent',d,...
               msgbox('desired FEC CodeRate is not supported','Error','error')
         elseif ~(str2double(edt1.String)<18e3 && str2double(edt1.String)>2e3 )
               msgbox('Center Frequency range must be within 2-18 KHz ','Error','warn')
-        elseif str2double(edt2.String)>1e3
-              msgbox('Symbol Rate must be Less than 1Ks/s ','Error','warn')
+        elseif str2double(edt2.String)>4e3
+              msgbox('Symbol Rate must be Less than 4Ks/s ','Error','warn')
         else
             FEC=edt3.String;
             CenterFreq=str2double(edt1.String);

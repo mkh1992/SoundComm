@@ -24,7 +24,7 @@ lagDiff = lag(I);
 Train=[1,1,1,0,0,0,1,0,1,0,1,0,0,0,1,0,0,1,1,1,1,0,1,1,0,1,0,0,1,...
     1,1,0,1,0,0,0,0,1,0,1,0,1,0,1,1,1,0,0,0,1,0,1,1,1,0,0,0,1,0,1,1,1,0,0]';
 TrainSec=gmsk_mod(Train,SymbolRate);
-curser=lagDiff+88200;
+curser=lagDiff+44100/2;
 %% Extract data Frames
 TrainCheck=0;
 TXT=[];
