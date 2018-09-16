@@ -2,6 +2,8 @@
 %BCH code(29,24)  ----->   convolutional interleaving  ------>  convolutional FEC code
 function CodedData=MessageCoder(HEX,FEC)
 message=hexToBinaryVector(HEX,8);
+% dec=hex2dec(HEX);
+% message=de2bi(dec,8,'left-msb');
 [s,~]=size(message);
 CombMess=reshape(message',24,ceil(s/3))'; % combine each 3 byte for codding
 %% BCH SETTING
